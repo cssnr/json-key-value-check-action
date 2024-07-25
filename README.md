@@ -1,6 +1,8 @@
 [![Tags](https://img.shields.io/github/actions/workflow/status/cssnr/json-key-value-check-action/tags.yaml?logo=github&logoColor=white&label=tags)](https://github.com/cssnr/json-key-value-check-action/actions/workflows/tags.yaml)
 [![Test](https://img.shields.io/github/actions/workflow/status/cssnr/json-key-value-check-action/test.yaml?logo=github&logoColor=white&label=test)](https://github.com/cssnr/json-key-value-check-action/actions/workflows/test.yaml)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=cssnr_json-key-value-check-action&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=cssnr_json-key-value-check-action)
 [![GitHub Release Version](https://img.shields.io/github/v/release/cssnr/json-key-value-check-action?logo=github)](https://github.com/cssnr/json-key-value-check-action/releases/latest)
+[![GitHub Last Commit](https://img.shields.io/github/last-commit/cssnr/json-key-value-check-action?logo=github&logoColor=white&label=updated)](https://github.com/cssnr/json-key-value-check-action/graphs/commit-activity)
 [![GitHub Top Language](https://img.shields.io/github/languages/top/cssnr/json-key-value-check-action?logo=htmx&logoColor=white)](https://github.com/cssnr/json-key-value-check-action)
 [![GitHub Org Stars](https://img.shields.io/github/stars/cssnr?style=flat&logo=github&logoColor=white)](https://cssnr.github.io/)
 [![Discord](https://img.shields.io/discord/899171661457293343?logo=discord&logoColor=white&label=discord&color=7289da)](https://discord.gg/wXy6m2X8wY)
