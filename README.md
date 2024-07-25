@@ -7,7 +7,7 @@
 
 # JSON Key Value Check Action
 
-Check that JSON Key's Contains Provided Values.
+Check that JSON Key's Values Match Provided Values.
 
 * [Inputs](#Inputs)
 * [Examples](#Examples)
@@ -26,6 +26,7 @@ Check that JSON Key's Contains Provided Values.
 | file      | No       | `package.json` | JSON File Path to Validate     |
 | keys      | **Yes**  | -              | Keys to Check, One per Line    |
 | values    | **Yes**  | -              | Values to Verify, One per Line |
+| seperator | No       | `.`            | Nested Key Seperator           |
   
 For multiple `keys` and `values` use new lines with a yaml `|`.
 
@@ -33,7 +34,7 @@ For multiple `keys` and `values` use new lines with a yaml `|`.
 
 ```yaml
 - name: 'Verify JSON'
-  uses: cssnr/json-key-value-check-action@v1
+  uses: cssnr/json-key-value-check-action@master
   with:
     file: manifest.json
     keys: version
@@ -44,7 +45,7 @@ Same as above but also setting an additional key value pair.
 
 ```yaml
 - name: 'Verify JSON'
-  uses: cssnr/json-key-value-check-action@v1
+  uses: cssnr/json-key-value-check-action@master
   with:
     file: manifest.json
     keys: |
@@ -59,7 +60,7 @@ Set a nested key and use file from different directory.
 
 ```yaml
 - name: 'Verify JSON'
-  uses: cssnr/json-key-value-check-action@v1
+  uses: cssnr/json-key-value-check-action@master
   with:
     file: src/manifest.json
     keys: |

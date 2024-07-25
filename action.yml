@@ -1,5 +1,5 @@
 name: "JSON Key Value Check Action"
-description: "Check that JSON Key's Contains Provided Values"
+description: "Check that JSON Key's Values Match Provided Values"
 author: "Shane"
 branding:
   icon: "code"
@@ -17,6 +17,10 @@ inputs:
   values:
     description: "Values to Verify"
     required: false
+  seperator:
+    description: "Nested Key Seperator"
+    required: false
+    default: "."
 
 outputs:
   result:

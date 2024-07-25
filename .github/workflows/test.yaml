@@ -20,8 +20,12 @@ jobs:
         id: test
         uses: ./
         with:
-          keys: name
-          values: json-key-value-check-action
+          keys: |
+            name
+            scripts.lint
+          values: |
+            json-key-value-check-action
+            npx eslint src
 
   lint:
     name: "Lint"
