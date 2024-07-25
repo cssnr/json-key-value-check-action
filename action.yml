@@ -1,0 +1,27 @@
+name: "JSON Key Value Check Action"
+description: "Check that JSON Key's Contains Provided Values"
+author: "Shane"
+branding:
+  icon: "code"
+  color: "green"
+
+inputs:
+  file:
+    description: "JSON File"
+    required: false
+    default: "package.json"
+  keys:
+    description: "Keys to Check"
+    required: false
+    default: "version"
+  values:
+    description: "Values to Verify"
+    required: false
+
+outputs:
+  result:
+    description: "JSON Output Results"
+
+runs:
+  using: "node20"
+  main: "dist/index.js"
