@@ -20,12 +20,13 @@ jobs:
         id: test
         uses: ./
         with:
+          file: package.json
           keys: |
             name
             scripts.lint
           values: |
             json-key-value-check-action
-            npx eslint src
+            npx eslint src --ext .ts
 
   lint:
     name: "Lint"

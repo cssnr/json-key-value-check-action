@@ -1,16 +1,21 @@
 {
   "name": "json-key-value-check-action",
+  "main": "dist/index.js",
   "scripts": {
-    "build": "ncc build src/index.js",
+    "build": "npx ncc build src/index.ts",
     "build:watch": "npm run build -- --watch",
-    "lint": "npx eslint src"
+    "lint": "npx eslint src --ext .ts"
   },
   "dependencies": {
     "@actions/core": "^1.10.1"
   },
   "devDependencies": {
+    "@types/node": "^20.14.12",
+    "@typescript-eslint/eslint-plugin": "^7.17.0",
+    "@typescript-eslint/parser": "^7.17.0",
     "@vercel/ncc": "^0.38.1",
     "eslint": "^8.57.0",
-    "prettier": "^3.3.3"
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4"
   }
 }

@@ -17,25 +17,25 @@ Check that JSON Key's Values Match Provided Values.
 * [Contributing](#Contributing)
 
 > [!NOTE]  
-> Please submit a
-> [Feature Request](https://github.com/cssnr/json-key-value-check-action/discussions/categories/feature-requests)
+> Please submit
+> a [Feature Request](https://github.com/cssnr/json-key-value-check-action/discussions/categories/feature-requests)
 > for new features or [Open an Issue](https://github.com/cssnr/json-key-value-check-action/issues) if you find any bugs.
 
 ## Inputs
 
-| input     | required | default        | description                    |
-|-----------|----------|----------------|--------------------------------|
-| file      | No       | `package.json` | JSON File Path to Validate     |
-| keys      | **Yes**  | -              | Keys to Check, One per Line    |
-| values    | **Yes**  | -              | Values to Verify, One per Line |
-| seperator | No       | `.`            | Nested Key Seperator           |
-  
+| input     | required | default | description                    |
+|-----------|----------|---------|--------------------------------|
+| file      | **Yes**  | -       | JSON File Path to Validate     |
+| keys      | **Yes**  | -       | Keys to Check, One per Line    |
+| values    | **Yes**  | -       | Values to Verify, One per Line |
+| seperator | No       | `.`     | Nested Key Seperator           |
+
 For multiple `keys` and `values` use new lines with a yaml `|`.
 
 ## Examples
 
 ```yaml
-- name: 'Verify JSON'
+- name: "Verify JSON"
   uses: cssnr/json-key-value-check-action@master
   with:
     file: manifest.json
@@ -46,7 +46,7 @@ For multiple `keys` and `values` use new lines with a yaml `|`.
 Same as above but also setting an additional key value pair.
 
 ```yaml
-- name: 'Verify JSON'
+- name: "Verify JSON"
   uses: cssnr/json-key-value-check-action@master
   with:
     file: manifest.json
@@ -61,7 +61,7 @@ Same as above but also setting an additional key value pair.
 Set a nested key and use file from different directory.
 
 ```yaml
-- name: 'Verify JSON'
+- name: "Verify JSON"
   uses: cssnr/json-key-value-check-action@master
   with:
     file: src/manifest.json

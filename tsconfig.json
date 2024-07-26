@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "module": "NodeNext",
+    "noImplicitAny": true,
+    "outDir": "./dist",
+    "removeComments": true,
+    "skipLibCheck": true,
+    "target": "ES2022"
+  },
+  "include": ["src/**/*"]
+}
