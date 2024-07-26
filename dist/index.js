@@ -24916,6 +24916,85 @@ exports["default"] = _default;
 
 /***/ }),
 
+/***/ 6144:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const core = __importStar(__nccwpck_require__(2186));
+const fs = __importStar(__nccwpck_require__(7147));
+(async () => {
+    try {
+        const file = core.getInput('file', { required: true });
+        console.log('file:', file);
+        const keys = core
+            .getInput('keys', { required: true })
+            .split('\n');
+        console.log('keys:', keys);
+        const values = core
+            .getInput('values', { required: true })
+            .split('\n');
+        console.log('values:', values);
+        const seperator = core.getInput('seperator', {
+            required: true,
+            trimWhitespace: false,
+        });
+        console.log('seperator:', seperator);
+        if (keys.length !== values.length) {
+            return core.setFailed('Keys and Values length are not equal.');
+        }
+        const fileData = fs.readFileSync(file);
+        const data = JSON.parse(fileData.toString());
+        for (let i = 0; i < keys.length; i++) {
+            console.log(`--- ${i + 1}: ${keys[i]}: ${values[i]}`);
+            const key = keys[i].split(seperator);
+            console.log('key:', key);
+            const value = key.reduce((x, y) => x?.[y] ?? null, data);
+            console.log('value:', value);
+            if (values[i] == value) {
+                core.info(`\u001b[32m"${values[i]}" == "${value}"`);
+            }
+            else {
+                core.info(`\u001b[31;1m"${values[i]}" != "${value}"`);
+                return core.setFailed('One or more values were not equal.');
+            }
+        }
+        core.info(`\u001b[32;1mFinished Success`);
+    }
+    catch (e) {
+        core.debug(e);
+        core.info(e.message);
+        core.setFailed(e.message);
+    }
+})();
+
+
+/***/ }),
+
 /***/ 9491:
 /***/ ((module) => {
 
@@ -26803,59 +26882,12 @@ module.exports = parseParams
 /******/ 	if (typeof __nccwpck_require__ !== 'undefined') __nccwpck_require__.ab = __dirname + "/";
 /******/ 	
 /************************************************************************/
-var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
-(() => {
-const core = __nccwpck_require__(2186)
-const fs = __nccwpck_require__(7147)
-
-;(async () => {
-    try {
-        // Parse Inputs
-        const file = core.getInput('file', { required: true })
-        console.log('file:', file)
-        const keys = core.getInput('keys', { required: true }).split('\n')
-        console.log('keys:', keys)
-        const values = core.getInput('values', { required: true }).split('\n')
-        console.log('values:', values)
-        const seperator = core.getInput('seperator', {
-            required: true,
-            trimWhitespace: false,
-        })
-        console.log('seperator:', seperator)
-
-        // Validate Inputs
-        if (keys.length !== values.length) {
-            return core.setFailed('Keys and Values length are not equal.')
-        }
-
-        // Validate JSON
-        const fileData = fs.readFileSync(file)
-        const data = JSON.parse(fileData.toString())
-        for (let i = 0; i < keys.length; i++) {
-            console.log(`--- ${i + 1}: ${keys[i]}: ${values[i]}`)
-            const key = keys[i].split(seperator)
-            console.log('key:', key)
-            const value = key.reduce((x, y) => x?.[y] ?? null, data)
-            console.log('value:', value)
-            if (values[i] == value) {
-                core.info(`\u001b[32m"${values[i]}" == "${value}"`)
-            } else {
-                core.info(`\u001b[31;1m"${values[i]}" != "${value}"`)
-                return core.setFailed('One or more values were not equal.')
-            }
-        }
-
-        core.info(`\u001b[32;1mFinished Success`)
-    } catch (e) {
-        core.debug(e)
-        core.info(e.message)
-        core.setFailed(e.message)
-    }
-})()
-
-})();
-
-module.exports = __webpack_exports__;
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module is referenced by other modules so it can't be inlined
+/******/ 	var __webpack_exports__ = __nccwpck_require__(6144);
+/******/ 	module.exports = __webpack_exports__;
+/******/ 	
 /******/ })()
 ;

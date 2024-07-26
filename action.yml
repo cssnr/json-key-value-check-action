@@ -8,15 +8,13 @@ branding:
 inputs:
   file:
     description: "JSON File"
-    required: false
-    default: "package.json"
+    required: true
   keys:
     description: "Keys to Check"
-    required: false
-    default: "version"
+    required: true
   values:
     description: "Values to Verify"
-    required: false
+    required: true
   seperator:
     description: "Nested Key Seperator"
     required: false
