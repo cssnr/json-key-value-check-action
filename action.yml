@@ -1,4 +1,4 @@
-name: "JSON Key Value Check Action"
+name: "JSON Key Value Check"
 description: "Check that JSON Key's Values Match Provided Values"
 author: "Shane"
 branding:

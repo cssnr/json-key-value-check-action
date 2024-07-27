@@ -36,7 +36,7 @@ For multiple `keys` and `values` use new lines with a yaml `|`.
 
 ```yaml
 - name: "Verify JSON"
-  uses: cssnr/json-key-value-check-action@master
+  uses: cssnr/json-key-value-check-action@v1
   with:
     file: manifest.json
     keys: version
@@ -47,7 +47,7 @@ Same as above but also setting an additional key value pair.
 
 ```yaml
 - name: "Verify JSON"
-  uses: cssnr/json-key-value-check-action@master
+  uses: cssnr/json-key-value-check-action@v1
   with:
     file: manifest.json
     keys: |
@@ -62,7 +62,7 @@ Set a nested key and use file from different directory.
 
 ```yaml
 - name: "Verify JSON"
-  uses: cssnr/json-key-value-check-action@master
+  uses: cssnr/json-key-value-check-action@v1
   with:
     file: src/manifest.json
     keys: |
