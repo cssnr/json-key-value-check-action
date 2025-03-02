@@ -26,11 +26,11 @@ Check that JSON Key's Values Match Provided Values.
 ## Inputs
 
 | input     | required | default | description                    |
-| --------- | -------- | ------- | ------------------------------ |
+| --------- | :------: | ------- | ------------------------------ |
 | file      | **Yes**  | -       | JSON File Path to Validate     |
 | keys      | **Yes**  | -       | Keys to Check, One per Line    |
 | values    | **Yes**  | -       | Values to Verify, One per Line |
-| seperator | No       | `.`     | Nested Key Seperator           |
+| seperator |    -     | `.`     | Nested Key Seperator           |
 
 For multiple `keys` and `values` use new lines with a yaml `|`.
 
