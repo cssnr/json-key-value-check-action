@@ -4,7 +4,8 @@
   "scripts": {
     "build": "npx ncc build src/index.ts",
     "build:watch": "npm run build -- --watch",
-    "lint": "npx eslint src"
+    "lint": "npx eslint src",
+    "prettier": "npx prettier --check ."
   },
   "dependencies": {
     "@actions/core": "^1.11.1"

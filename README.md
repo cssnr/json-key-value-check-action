@@ -1,5 +1,6 @@
 [![Tags](https://img.shields.io/github/actions/workflow/status/cssnr/json-key-value-check-action/tags.yaml?logo=github&logoColor=white&label=tags)](https://github.com/cssnr/json-key-value-check-action/actions/workflows/tags.yaml)
 [![Test](https://img.shields.io/github/actions/workflow/status/cssnr/json-key-value-check-action/test.yaml?logo=github&logoColor=white&label=test)](https://github.com/cssnr/json-key-value-check-action/actions/workflows/test.yaml)
+[![Lint](https://img.shields.io/github/actions/workflow/status/cssnr/json-key-value-check-action/lint.yaml?logo=github&logoColor=white&label=lint)](https://github.com/cssnr/json-key-value-check-action/actions/workflows/lint.yaml)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=cssnr_json-key-value-check-action&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=cssnr_json-key-value-check-action)
 [![GitHub Release Version](https://img.shields.io/github/v/release/cssnr/json-key-value-check-action?logo=github)](https://github.com/cssnr/json-key-value-check-action/releases/latest)
 [![GitHub Last Commit](https://img.shields.io/github/last-commit/cssnr/json-key-value-check-action?logo=github&logoColor=white&label=updated)](https://github.com/cssnr/json-key-value-check-action/graphs/commit-activity)
@@ -18,9 +19,9 @@ Check that JSON Key's Values Match Provided Values.
 - [Contributing](#Contributing)
 
 > [!NOTE]  
-> Please submit
-> a [Feature Request](https://github.com/cssnr/json-key-value-check-action/discussions/categories/feature-requests)
-> for new features or [Open an Issue](https://github.com/cssnr/json-key-value-check-action/issues) if you find any bugs.
+> Please submit a [Feature Request](https://github.com/cssnr/json-key-value-check-action/discussions/categories/feature-requests)
+> for new features or [Open an Issue](https://github.com/cssnr/json-key-value-check-action/issues)
+> if you find any bugs.
 
 ## Inputs
 
@@ -83,8 +84,7 @@ If you are experiencing an issue/bug or getting unexpected results, you can:
 
 - Report an Issue: https://github.com/cssnr/json-key-value-check-action/issues
 - Chat with us on Discord: https://discord.gg/wXy6m2X8wY
-- Provide General
-  Feedback: [https://cssnr.github.io/feedback/](https://cssnr.github.io/feedback)
+- Provide General Feedback: [https://cssnr.github.io/feedback/](https://cssnr.github.io/feedback)
 
 # Contributing
 
@@ -92,13 +92,15 @@ Currently, the best way to contribute to this project is to star this project on
 
 Additionally, you can support other GitHub Actions I have published:
 
-- [VirusTotal Action](https://github.com/cssnr/virustotal-action)
-- [Update Version Tags Action](https://github.com/cssnr/update-version-tags-action)
-- [Update JSON Value Action](https://github.com/cssnr/update-json-value-action)
-- [Parse Issue Form Action](https://github.com/cssnr/parse-issue-form-action)
-- [Mirror Repository Action](https://github.com/cssnr/mirror-repository-action)
-- [Stack Deploy Action](https://github.com/cssnr/stack-deploy-action)
-- [Portainer Stack Deploy](https://github.com/cssnr/portainer-stack-deploy-action)
-- [Mozilla Addon Update Action](https://github.com/cssnr/mozilla-addon-update-action)
+- [Stack Deploy Action](https://github.com/cssnr/stack-deploy-action?tab=readme-ov-file#readme)
+- [Portainer Stack Deploy](https://github.com/cssnr/portainer-stack-deploy-action?tab=readme-ov-file#readme)
+- [VirusTotal Action](https://github.com/cssnr/virustotal-action?tab=readme-ov-file#readme)
+- [Mirror Repository Action](https://github.com/cssnr/mirror-repository-action?tab=readme-ov-file#readme)
+- [Update Version Tags Action](https://github.com/cssnr/update-version-tags-action?tab=readme-ov-file#readme)
+- [Update JSON Value Action](https://github.com/cssnr/update-json-value-action?tab=readme-ov-file#readme)
+- [Parse Issue Form Action](https://github.com/cssnr/parse-issue-form-action?tab=readme-ov-file#readme)
+- [Cloudflare Purge Cache Action](https://github.com/cssnr/cloudflare-purge-cache-action?tab=readme-ov-file#readme)
+- [Mozilla Addon Update Action](https://github.com/cssnr/mozilla-addon-update-action?tab=readme-ov-file#readme)
+- [Docker Tags Action](https://github.com/cssnr/docker-tags-action?tab=readme-ov-file#readme)
 
 For a full list of current projects to support visit: [https://cssnr.github.io/](https://cssnr.github.io/)
