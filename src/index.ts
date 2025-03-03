@@ -1,6 +1,7 @@
 import * as core from '@actions/core'
 import * as fs from 'fs'
 
+// main
 ;(async () => {
     try {
         // Parse Inputs
