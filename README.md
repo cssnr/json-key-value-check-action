@@ -20,8 +20,7 @@ Check that JSON Key's Values Match Provided Values.
 
 > [!NOTE]  
 > Please submit a [Feature Request](https://github.com/cssnr/json-key-value-check-action/discussions/categories/feature-requests)
-> for new features or [Open an Issue](https://github.com/cssnr/json-key-value-check-action/issues)
-> if you find any bugs.
+> for new features or [Open an Issue](https://github.com/cssnr/json-key-value-check-action/issues) if you find any bugs.
 
 ## Inputs
 
