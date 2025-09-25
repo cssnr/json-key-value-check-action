@@ -1,7 +1,7 @@
 [![GitHub Tag Major](https://img.shields.io/github/v/tag/cssnr/json-key-value-check-action?sort=semver&filter=!v*.*&logo=git&logoColor=white&labelColor=585858&label=%20)](https://github.com/cssnr/json-key-value-check-action/tags)
 [![GitHub Tag Minor](https://img.shields.io/github/v/tag/cssnr/json-key-value-check-action?sort=semver&filter=!v*.*.*&logo=git&logoColor=white&labelColor=585858&label=%20)](https://github.com/cssnr/json-key-value-check-action/releases)
 [![GitHub Release Version](https://img.shields.io/github/v/release/cssnr/json-key-value-check-action?logo=git&logoColor=white&labelColor=585858&label=%20)](https://github.com/cssnr/json-key-value-check-action/releases/latest)
-[![GitHub Dist Size](https://img.shields.io/github/size/cssnr/json-key-value-check-action/dist%2Findex.js?logo=bookstack&logoColor=white&label=dist%20size)](https://github.com/cssnr/json-key-value-check-action/blob/master/src/index.js)
+[![GitHub Dist Size](https://img.shields.io/github/size/cssnr/json-key-value-check-action/dist%2Findex.js?logo=bookstack&logoColor=white&label=dist%20size)](https://github.com/cssnr/json-key-value-check-action/blob/master/src/index.ts)
 [![Workflow Release](https://img.shields.io/github/actions/workflow/status/cssnr/json-key-value-check-action/release.yaml?logo=cachet&label=release)](https://github.com/cssnr/json-key-value-check-action/actions/workflows/release.yaml)
 [![Workflow Test](https://img.shields.io/github/actions/workflow/status/cssnr/json-key-value-check-action/test.yaml?logo=cachet&label=test)](https://github.com/cssnr/json-key-value-check-action/actions/workflows/test.yaml)
 [![Workflow Lint](https://img.shields.io/github/actions/workflow/status/cssnr/json-key-value-check-action/lint.yaml?logo=cachet&label=lint)](https://github.com/cssnr/json-key-value-check-action/actions/workflows/lint.yaml)
@@ -20,12 +20,12 @@
 
 # JSON Key Value Check Action
 
-Check that JSON Key's Values Match Provided Values.
-
 - [Inputs](#Inputs)
 - [Examples](#Examples)
 - [Support](#Support)
 - [Contributing](#Contributing)
+
+Check that JSON Key's Values Match Provided Values.
 
 > [!NOTE]  
 > Please submit a [Feature Request](https://github.com/cssnr/json-key-value-check-action/discussions/categories/feature-requests)
