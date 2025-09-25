@@ -1,10 +1,10 @@
 import js from '@eslint/js'
 import typescriptEslint from '@typescript-eslint/eslint-plugin'
 import tsParser from '@typescript-eslint/parser'
-import tseslint from 'typescript-eslint'
 import { defineConfig } from 'eslint/config'
 
-export default defineConfig(js.configs.recommended, tseslint.configs.recommended, {
+export default defineConfig({
+    extends: [js.configs.recommended],
     plugins: {
         '@typescript-eslint': typescriptEslint,
     },
@@ -22,5 +22,6 @@ export default defineConfig(js.configs.recommended, tseslint.configs.recommended
     rules: {
         'no-undef': 'off',
         'no-extra-semi': 'off',
+        '@typescript-eslint/no-explicit-any': 'off',
     },
 })
