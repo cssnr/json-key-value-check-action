@@ -1,5 +1,5 @@
 import * as core from '@actions/core'
-import * as fs from 'fs'
+import * as fs from 'node:fs'
 
 // main
 ;(async () => {
@@ -7,13 +7,9 @@ import * as fs from 'fs'
         // Parse Inputs
         const file: string = core.getInput('file', { required: true })
         console.log('file:', file)
-        const keys: string[] = core
-            .getInput('keys', { required: true })
-            .split('\n')
+        const keys: string[] = core.getInput('keys', { required: true }).split('\n')
         console.log('keys:', keys)
-        const values: string[] = core
-            .getInput('values', { required: true })
-            .split('\n')
+        const values: string[] = core.getInput('values', { required: true }).split('\n')
         console.log('values:', values)
         const seperator: string = core.getInput('seperator', {
             required: true,
@@ -45,8 +41,10 @@ import * as fs from 'fs'
 
         core.info(`\u001b[32;1mFinished Success`)
     } catch (e) {
-        core.debug(e)
-        core.info(e.message)
-        core.setFailed(e.message)
+        console.log(e)
+        if (e instanceof Error) core.setFailed(e.message)
+        // const msg = e instanceof Error ? e.message : String(e)
+        // core.info(msg)
+        // core.setFailed(msg)
     }
 })()
