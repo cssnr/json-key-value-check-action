@@ -8,6 +8,10 @@ on:
     branches: [master]
   pull_request:
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   test:
     name: "Test"
@@ -25,13 +29,13 @@ jobs:
           file: package.json
           keys: |
             name
-            scripts.lint
+            scripts.prettier:check
           values: |
             json-key-value-check-action
-            npx eslint src
+            npx prettier --check .
 
       - name: "Schedule Failure Notification"
-        if: ${{ always() && failure() && github.event_name == 'schedule' }}
+        if: ${{ failure() && github.event_name == 'schedule' }}
         uses: sarisia/actions-status-discord@v1
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
