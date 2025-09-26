@@ -22,6 +22,7 @@
 
 - [Inputs](#Inputs)
 - [Examples](#Examples)
+- [Tags](#Tags)
 - [Support](#Support)
 - [Contributing](#Contributing)
 
@@ -81,18 +82,36 @@ Set a nested key and use file from different directory.
       "Release ${{ github.ref_name }}"
 ```
 
+For more examples, you can check out other projects using this action:  
+https://github.com/cssnr/json-key-value-check-action/network/dependents
+
+## Tags
+
+The following rolling [tags](https://github.com/cssnr/json-key-value-check-action/tags) are maintained.
+
+| Version&nbsp;Tag                                                                                                                                                                                                                | Rolling | Bugs | Feat. |   Name    |  Target  | Example  |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :-----: | :--: | :---: | :-------: | :------: | :------- |
+| [![GitHub Tag Major](https://img.shields.io/github/v/tag/cssnr/json-key-value-check-action?sort=semver&filter=!v*.*&style=for-the-badge&label=%20&color=44cc10)](https://github.com/cssnr/json-key-value-check-action/releases) |   ✅    |  ✅  |  ✅   | **Major** | `vN.x.x` | `vN`     |
+| [![GitHub Tag Minor](https://img.shields.io/github/v/tag/cssnr/json-key-value-check-action?sort=semver&filter=!v*.*.*&style=for-the-badge&label=%20&color=blue)](https://github.com/cssnr/json-key-value-check-action/releases) |   ✅    |  ✅  |  ❌   | **Minor** | `vN.N.x` | `vN.N`   |
+| [![GitHub Release](https://img.shields.io/github/v/release/cssnr/json-key-value-check-action?style=for-the-badge&label=%20&color=red)](https://github.com/cssnr/json-key-value-check-action/releases)                           |   ❌    |  ❌  |  ❌   | **Micro** | `vN.N.N` | `vN.N.N` |
+
+You can view the release notes for each version on the [releases](https://github.com/cssnr/json-key-value-check-action/releases) page.
+
+The **Major** tag is recommended. It is the most up-to-date and always backwards compatible.
+Breaking changes would result in a **Major** version bump. At a minimum you should use a **Minor** tag.
+
 # Support
 
-For general help or to request a feature, see:
+For general help or to request a feature see:
 
 - Q&A Discussion: https://github.com/cssnr/json-key-value-check-action/discussions/categories/q-a
 - Request a Feature: https://github.com/cssnr/json-key-value-check-action/discussions/categories/feature-requests
 
-If you are experiencing an issue/bug or getting unexpected results, you can:
+If you are experiencing an issue/bug or getting unexpected results you can:
 
 - Report an Issue: https://github.com/cssnr/json-key-value-check-action/issues
 - Chat with us on Discord: https://discord.gg/wXy6m2X8wY
-- Provide General Feedback: [https://cssnr.github.io/feedback/](https://cssnr.github.io/feedback)
+- Provide General Feedback: [https://cssnr.github.io/feedback/](https://cssnr.github.io/feedback/?app=Stack%20Deploy%20Action)
 
 For more information, see the CSSNR [SUPPORT.md](https://github.com/cssnr/.github/blob/master/.github/SUPPORT.md#support).
 
