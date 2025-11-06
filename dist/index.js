@@ -1,3 +1,4 @@
+import * as fs from 'node:fs';
 import require$$0 from 'os';
 import require$$0$1 from 'crypto';
 import require$$1 from 'fs';
@@ -27,7 +28,6 @@ import require$$6 from 'string_decoder';
 import require$$0$9 from 'diagnostics_channel';
 import require$$2$2 from 'child_process';
 import require$$6$1 from 'timers';
-import * as fs from 'node:fs';
 
 var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
 
@@ -1719,7 +1719,7 @@ function requireTimers () {
 	return timers;
 }
 
-var main = {exports: {}};
+var main$1 = {exports: {}};
 
 var sbmh;
 var hasRequiredSbmh;
@@ -3257,7 +3257,7 @@ function requireUrlencoded () {
 var hasRequiredMain;
 
 function requireMain () {
-	if (hasRequiredMain) return main.exports;
+	if (hasRequiredMain) return main$1.exports;
 	hasRequiredMain = 1;
 
 	const WritableStream = require$$0$7.Writable;
@@ -3338,12 +3338,12 @@ function requireMain () {
 	  this._parser.write(chunk, cb);
 	};
 
-	main.exports = Busboy;
-	main.exports.default = Busboy;
-	main.exports.Busboy = Busboy;
+	main$1.exports = Busboy;
+	main$1.exports.default = Busboy;
+	main$1.exports.Busboy = Busboy;
 
-	main.exports.Dicer = Dicer;
-	return main.exports;
+	main$1.exports.Dicer = Dicer;
+	return main$1.exports;
 }
 
 var constants$3;
@@ -27247,43 +27247,44 @@ function requireCore () {
 
 var coreExports = requireCore();
 
-(async () => {
-    try {
-        const file = coreExports.getInput('file', { required: true });
-        console.log('file:', file);
-        const keys = coreExports.getInput('keys', { required: true }).split('\n');
-        console.log('keys:', keys);
-        const values = coreExports.getInput('values', { required: true }).split('\n');
-        console.log('values:', values);
-        const seperator = coreExports.getInput('seperator', {
-            required: true,
-            trimWhitespace: false,
-        });
-        console.log('seperator:', seperator);
-        if (keys.length !== values.length) {
-            return coreExports.setFailed('Keys and Values length are not equal.');
-        }
-        const fileData = fs.readFileSync(file);
-        const data = JSON.parse(fileData.toString());
-        for (let i = 0; i < keys.length; i++) {
-            console.log(`--- ${i + 1}: ${keys[i]}: ${values[i]}`);
-            const key = keys[i].split(seperator);
-            console.log('key:', key);
-            const value = key.reduce((x, y) => x?.[y] ?? null, data);
-            console.log('value:', value);
-            if (values[i] == value) {
-                coreExports.info(`\u001b[32m"${values[i]}" == "${value}"`);
-            }
-            else {
-                coreExports.info(`\u001b[31;1m"${values[i]}" != "${value}"`);
-                return coreExports.setFailed('One or more values were not equal.');
-            }
-        }
-        coreExports.info(`\u001b[32;1mFinished Success`);
+async function main() {
+    const file = coreExports.getInput('file', { required: true });
+    console.log('file:', file);
+    const keys = coreExports.getInput('keys', { required: true }).split('\n');
+    console.log('keys:', keys);
+    const values = coreExports.getInput('values', { required: true }).split('\n');
+    console.log('values:', values);
+    const seperator = coreExports.getInput('seperator', {
+        required: true,
+        trimWhitespace: false,
+    });
+    console.log('seperator:', seperator);
+    if (keys.length !== values.length) {
+        return coreExports.setFailed('Keys and Values length are not equal.');
     }
-    catch (e) {
-        console.log(e);
-        if (e instanceof Error)
-            coreExports.setFailed(e.message);
+    const fileData = fs.readFileSync(file);
+    const data = JSON.parse(fileData.toString());
+    for (let i = 0; i < keys.length; i++) {
+        console.log(`--- ${i + 1}: ${keys[i]}: ${values[i]}`);
+        const key = keys[i].split(seperator);
+        console.log('key:', key);
+        const value = key.reduce((x, y) => x?.[y] ?? null, data);
+        console.log('value:', value);
+        if (values[i] == value) {
+            coreExports.info(`\u001b[32m"${values[i]}" == "${value}"`);
+        }
+        else {
+            coreExports.info(`\u001b[31;1m"${values[i]}" != "${value}"`);
+            return coreExports.setFailed('One or more values were not equal.');
+        }
     }
-})();
+    coreExports.info(`\u001b[32;1mFinished Success`);
+}
+try {
+    await main();
+}
+catch (e) {
+    console.log(e);
+    if (e instanceof Error)
+        coreExports.setFailed(e.message);
+}

@@ -3,9 +3,13 @@
   "compilerOptions": {
     "outDir": "./dist",
     "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "target": "ES2022",
     "strict": true,
     "noImplicitAny": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
     "removeComments": true,
     "skipLibCheck": true
   },

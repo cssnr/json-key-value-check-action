@@ -8,7 +8,7 @@ export default {
     output: {
         esModule: true,
         file: 'dist/index.js',
-        format: 'es',
+        format: 'esm',
     },
-    plugins: [typescript(), nodeResolve({ preferBuiltins: true }), commonjs()],
+    plugins: [commonjs(), nodeResolve({ preferBuiltins: true }), typescript()],
 }
